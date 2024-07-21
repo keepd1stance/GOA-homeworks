@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>form</title>
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        
+        <br>
+        <hr>
+        <br>
+        
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="ru">Russia</option>
+            <option value="usa">America</option>
+            <option value="geo">Georgia</option>
+        </select>
+        
+        <br>
+        <hr>
+        <br>
+        
+        <div class="radio-group">
+            <span>Gender:</span>
+            <label><input type="radio" name="gender" value="male">Male</label>
+            <label><input type="radio" name="gender" value="female">Female</label>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+        
+        <div class="checkbox-group">
+            <label><input type="checkbox" id="accept" name="accept">I accept privacy policy</label>
+        </div>
+
+        <label for="hobby">Favourite Hobby:</label>
+        <select id="hobby" name="hobby">
+            <option value="sports">Sport</option>
+            <option value="music">Music</option>
+            <option value="reading">Reading</option>
+        </select>
+        
+        <br>
+        <hr>
+        <br>
+        
+        <div class="file-upload">
+            <label for="profile-pic">Upload profile picture:</label>
+            <input type="file" id="profile-pic" name="profile-pic" accept=".jpg, .png">
+        </div>
+
+        <div class="date-input">
+            <label for="birthdate">Birth date:</label>
+            <input type="date" id="birthdate" name="birthdate">
+        </div>
+
+        <br>
+        <hr>
+        <br>
+        
+        <label for="relative">do you have siblings?</label>
+        <select id="relative" name="relative">
+            <option value="brother">Brother</option>
+            <option value="sister">Sister</option>
+            <option value="both">Both</option>
+        </select>
+        
+        <br>
+        <hr>
+        <br>
+        
+        <div>
+            <button type="submit" class="submit-btn">Submit</button>
+            <button type="reset" class="reset-btn">Reset</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<html>
+<head>
+    <title>Sell Your Car - AutoMarket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background: #444;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .sell-form {
+            margin-top: 20px;
+        }
+        .sell-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .sell-form input, .sell-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .sell-form button {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .sell-form button:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ავთოMarket - Sell Your Car</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="contactus.html">Contact Us</a>
+    <a href="sell.html">Sell Your Car</a>
+    <a href="buy.html">Buy a Car</a>
+</nav>
+
+<div class="container">
+    <div class="sell-form">
+        <h2>Sell Your Car</h2>
+        <form action="submit_car.html" method="post">
+            <label for="car-make">Car Make:</label>
+            <input type="text" id="car-make" name="car-make" required>
+
+            <label for="car-model">Car Model:</label>
+            <input type="text" id="car-model" name="car-model" required>
+
+            <label for="year">Year:</label>
+            <input type="text" id="year" name="year" required>
+
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <label for="image">Image URL:</label>
+            <input type="text" id="image" name="image" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
