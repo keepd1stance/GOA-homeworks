@@ -1,0 +1,16 @@
+git add .
+    es brdzaneba yvela cvlilebas amatebs indexshi(.git) failshi
+
+git commit -m "commit"
+    es brdzaneba igebs indexidan yvela cvlilebas da inaxavs repositoriis istoriashi
+
+git push
+    es brdzaneba agzavnis tqvens local "commit"-ebs live repositoriebshi romlebic ganlagebulia githubze, gitlabze da ase shemdeg
+
+git 
+    gamoiyeneba localuri failebis ufro advilad ganlagebashi da kontrolshi
+
+github 
+    gamoiyeneba localuri failebis live repositoriebshi shesanaxad
+
+
