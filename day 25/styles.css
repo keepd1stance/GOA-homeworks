@@ -1,0 +1,13 @@
+body {
+    background-color: #e0e0e0;
+}
+
+#main-title {
+    color: purple;
+    text-align: center;
+}
+
+.content {
+    font-size: 18px;
+    color: black;
+}
