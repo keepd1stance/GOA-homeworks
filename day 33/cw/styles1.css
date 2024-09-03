@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    height: 200px; 
+    border: 2px solid #333; 
+    background-color: #f8f8f8;
+}
+
+
+.child {
+    width: 100px; 
+    height: 100px; 
+    background-color: #add8e6;
+    border: 2px solid #00008b;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
