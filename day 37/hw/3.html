@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asdcda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #3498db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            transition: transform 0.5s ease;
+        }
+
+        .box:hover {
+            transform: scale(1.2);
+        }
+
+        .box:active {
+            transform: translate(30px, -30px) rotate(30deg);
+        }
+
+        .box:nth-child(2):hover {
+            transform: rotate(45deg) scale(1.3);
+        }
+
+        .box:nth-child(3):hover {
+            transform-origin: top right;
+            transform: translate(-20px, 50px) rotate(-30deg);
+        }
+
+        .box:nth-child(1) {
+            background-color: #e74c3c;
+        }
+
+        .box:nth-child(2) {
+            background-color: #2ecc71;
+        }
+
+        .box:nth-child(3) {
+            background-color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">box 1</div>
+        <div class="box">box 2</div>
+        <div class="box">box 3</div>
+    </div>
+
+</body>
+</html>
