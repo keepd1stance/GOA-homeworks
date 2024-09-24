@@ -1,0 +1,12 @@
+.box {
+    width: 250px; /* ბლოკის სიგანე */
+    height: 250px; /* ბლოკის სიმაღლე */
+    background-color: green; /* ფერი */
+    transition-property: background-color, transform; /* ვაცხადებთ როგორი ანიმაცია გვსურს */
+    transition-duration: 2s, 1s; /* პირველი ანიმაცია იქნება 2 წამი, მეორე 1 წამი */
+}
+
+.box:hover {
+    background-color: blue; /* ფერი */
+    transform: rotate(45deg) scale(1.2); /* მოძრაობა და გადიდება */
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Example</title>
+    <style>
+        .move-box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            transition: transform 0.3s ease; /* გლუვი გადასვლა */
+        }
+
+        /* hover-ისას ელემენტი გადაინაცვლებს 50px მარჯვნივ და ზევით */
+        .move-box:hover {
+            transform: translate(50px, -50px);
+        }
+
+        /* active-ისას ელემენტი გადაინაცვლებს 50px მარცხნივ და ქვევით */
+        .move-box:active {
+            transform: translate(-50px, 50px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">fff</div>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem;
+    color: white;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem; /* დაამატე gap */
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ff6347;
+}
+
+/* Burger icon */
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+#toggle-menu {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .nav-links {
+        font-size: 1rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .nav-links {
+        font-size: 1rem;
+        gap: 1rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #333;
+        width: 100%;
+        padding: 1rem 0;
+        gap: 600px;
+    }
+    .logo {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        font-size: 1rem;
+    }
+}

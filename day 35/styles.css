@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: grid;
+  }
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+  }
+  
+.grid-item:hover .overlay {
+    opacity: 1;
+  }

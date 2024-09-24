@@ -1,0 +1,26 @@
+body {
+    /* ელემენტის გადაადგილება 50 პიქსელით მარჯვნივ და 100 პიქსელით ქვემოთ */
+    transform: translate(50px, 100px); 
+  
+    /* ელემენტის მასშტაბირება 2-ჯერ (ორმაგი ზომა) */
+    transform: scale(2);              
+  
+    /* ელემენტის ბრუნვა 45 გრადუსით */
+    transform: rotate(45deg);                  
+  
+    /* ერთდროული ეფექტები: გადაადგილება, მასშტაბირება და ბრუნვა */
+    transform: translate(20px, 40px) scale(1.5) rotate(30deg); }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+        transform: translate(50px, -50px) scale(2);
+    }
+
+    .box:active {
+        transform: translate(-50px, 50px) scale(0.5); }

@@ -1,0 +1,16 @@
+.transform-box {
+    width: 200px;
+    height: 200px;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    margin: 100px auto;
+    transition: transform 0.5s ease;
+}
+
+.transform-box:hover {
+    transform: rotate(45deg); 
+    -webkit-transform: rotate(45deg); 
+    -moz-transform: rotate(45deg); 
+    -ms-transform: rotate(45deg); 
+}
