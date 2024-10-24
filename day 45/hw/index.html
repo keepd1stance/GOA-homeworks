@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>miau</title>
+</head>
+<body>
+
+
+  <h3>Addition, Multiplication, and Subtraction:</h3>
+  <p>Number 1: <input type="number" id="num1" value="5"></p>
+  <p>Number 2: <input type="number" id="num2" value="3"></p>
+  <button onclick="calculateAndDisplay()">Perform Calculation</button>
+  <p id="calcResult"></p>
+
+
+  <h3>Get the first character of a string:</h3>
+  <input type="text" id="inputString" value="Hello">
+  <button onclick="displayFirstChar()">Show First Character</button>
+  <p id="firstCharResult"></p>
+
+
+  <h3>Square of a number:</h3>
+  <input type="number" id="squareNum" value="4">
+  <button onclick="displaySquare()">Show Square</button>
+  <p id="squareResult"></p>
+
+
+  <h3>Change text color to red:</h3>
+  <p id="textToChangeColor">This text will turn red.</p>
+  <button onclick="changeColorToRed(document.getElementById('textToChangeColor'))">Change Color</button>
+
+
+  <h3>Change the text of an element:</h3>
+  <p id="textToChange">Change this text.</p>
+  <button onclick="changeElementText(document.getElementById('textToChange'), 'The text has been changed!')">Change Text</button>
+
+  <script>
+    function calculate(a, b) {
+      const sum = a + b;
+      const product = a * b;
+      const difference = a - b;
+
+      return {
+        sum: sum,
+        product: product,
+        difference: difference
+      };
+    }
+
+    function calculateAndDisplay() {
+      const num1 = parseFloat(document.getElementById("num1").value);
+      const num2 = parseFloat(document.getElementById("num2").value);
+      const result = calculate(num1, num2);
+      document.getElementById("calcResult").innerText = `Sum: ${result.sum}, Product: ${result.product}, Difference: ${result.difference}`;
+    }
+
+    function getFirstChar(str) {
+      if (str.length === 0) return '';
+      return str[0];
+    }
+
+    function displayFirstChar() {
+      const inputString = document.getElementById("inputString").value;
+      const firstChar = getFirstChar(inputString);
+      document.getElementById("firstCharResult").innerText = `First character: ${firstChar}`;
+    }
+
+    function square(num) {
+      return num * num;
+    }
+
+    function displaySquare() {
+      const squareNum = parseFloat(document.getElementById("squareNum").value);
+      const squareResult = square(squareNum);
+      document.getElementById("squareResult").innerText = `Square of the number: ${squareResult}`;
+    }
+
+    function changeColorToRed(element) {
+      element.style.color = 'red';
+    }
+
+    function changeElementText(element, newText) {
+      element.textContent = newText;
+    }
+  </script>
+
+</body>
+</html>

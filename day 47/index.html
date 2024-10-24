@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>JavaScript Functions Example</h1>
+
+    <section>
+        <h2>1. Convert Minutes to Seconds</h2>
+        <input type="number" id="minutes" placeholder="Enter minutes">
+        <button onclick="convertMinutes()">Convert</button>
+        <p id="minutesResult"></p>
+    </section>
+
+    <section>
+        <h2>2. Sum Product of Two Numbers and Multiply by Third</h2>
+        <input type="number" id="num1" placeholder="First number">
+        <input type="number" id="num2" placeholder="Second number">
+        <input type="number" id="num3" placeholder="Third number">
+        <button onclick="calculateSumProduct()">Calculate</button>
+        <p id="sumProductResult"></p>
+    </section>
+
+    <section>
+        <h2>3. Check if First Number is Greater than Second</h2>
+        <input type="number" id="firstNum" placeholder="First number">
+        <input type="number" id="secondNum" placeholder="Second number">
+        <button onclick="checkGreater()">Check</button>
+        <p id="greaterResult"></p>
+    </section>
+
+    <section>
+        <h2>4. Log Element to Console</h2>
+        <input type="text" id="logInput" placeholder="Enter element to log">
+        <button onclick="logElement(document.getElementById('logInput').value)">Log Element</button>
+    </section>
+
+    <section>
+        <h2>5. Set Element Text by ID</h2>
+        <input type="text" id="textToSet" placeholder="Enter text">
+        <input type="text" id="elementId" placeholder="(just text exampleId)">
+        <button onclick="setElementTextById(document.getElementById('elementId').value, document.getElementById('textToSet').value)">Set Text</button>
+    </section>
+
+    <p id="exampleId">This text will change.</p>
+
+    <script>
+        function minutesToSeconds(minutes) {
+            return minutes * 60;
+        }
+
+        function convertMinutes() {
+            const minutes = parseFloat(document.getElementById("minutes").value);
+            const seconds = minutesToSeconds(minutes);
+            document.getElementById("minutesResult").innerText = `${minutes} minutes = ${seconds} seconds`;
+        }
+
+        function sumProduct(num1, num2, num3) {
+            return (num1 + num2) * num3;
+        }
+
+        function calculateSumProduct() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const num3 = parseFloat(document.getElementById("num3").value);
+            const result = sumProduct(num1, num2, num3);
+            document.getElementById("sumProductResult").innerText = `Result: ${result}`;
+        }
+
+        function isGreater(num1, num2) {
+            return num1 > num2;
+        }
+
+        function checkGreater() {
+            const firstNum = parseFloat(document.getElementById("firstNum").value);
+            const secondNum = parseFloat(document.getElementById("secondNum").value);
+            const result = isGreater(firstNum, secondNum);
+            document.getElementById("greaterResult").innerText = `Is the first number greater? ${result}`;
+        }
+
+        function logElement(element) {
+            console.log("Element: " + element);
+        }
+
+        function setElementTextById(id, text) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.textContent = text;
+            }
+        }
+    </script>
+</body>
+</html>

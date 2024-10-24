@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  h3 {
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+  }
+  
+  p, input, button {
+    margin: 10px 0;
+  }
+  
+  input[type="number"], input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #calcResult, #firstCharResult, #squareResult {
+    font-weight: bold;
+  }
+  
+  .red-text {
+    color: red;
+  }
+  
+  #textToChangeColor {
+    font-size: 18px;
+    margin: 10px 0;
+    transition: color 0.5s ease;
+  }
+  
+  #textToChange {
+    font-size: 18px;
+    transition: text 0.5s ease;
+  }
