@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 20px;
+}
+
+.shape {
+    width: 80px;
+    height: 80px;
+}
+
+.square {
+    background-color: pink;
+}
+
+.circle {
+    background-color: orange;
+    border-radius: 50%;
+}
+
+.rectangle {
+    background-color: teal;
+    width: 120px;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 80px solid lightblue;
+}
+
+.pentagon {
+    background-color: lightgreen;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.oval {
+    background-color: peachpuff;
+    border-radius: 50%;
+    width: 100px;
+}
+
+.star {
+    background-color: lightgray;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.crescent {
+    position: relative; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    height: 75px; 
+    width: 75px; 
+    box-shadow: -15px 0px 0 5px red  ; 
+    border-radius: 50%; 
+} 
+.heart { 
+    position: relative; 
+    width: 100px; 
+    height: 90px; 
+} 
+
+.heart:before, .heart:after { 
+    position: absolute; 
+    content: ""; 
+    left: 50px; 
+    top: 0; 
+    width: 50px; 
+    height: 80px; 
+    background: yellow; 
+    border-radius: 50px 50px 0 0; 
+    transform: rotate(-45deg); 
+    transform-origin: 0 100%; 
+} 
+
+.heart:after { 
+    left: 0; 
+    transform: rotate(45deg); 
+    transform-origin :100% 100%; 
+}
