@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>მარტივი კალკულატორი</title>
+    <script>
+        function calculate() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var operation = document.getElementById("operation").value;
+            var result;
+
+            if (operation === "+") {
+                result = num1 + num2;
+            } else if (operation === "-") {
+                result = num1 - num2;
+            } else {
+                result = "არასწორი ოპერაცია";
+            }
+
+            document.getElementById("result").innerHTML = "ნაყოფი: " + result;
+        }
+    </script>
+</head>
+<body>
+    <h1>მარტივი კალკულატორი</h1>
+    
+    <label for="num1">პირველი რიცხვი:</label>
+    <input type="number" id="num1" required><br><br>
+    
+    <label for="num2">მეორე რიცხვი:</label>
+    <input type="number" id="num2" required><br><br>
+    
+    <label for="operation">ოპერაცია:</label>
+    <select id="operation">
+        <option value="+">მიმატება (+)</option>
+        <option value="-">გამოკლება (-)</option>
+    </select><br><br>
+    
+    <button onclick="calculate()">გამოთვალე</button>
+    
+    <p id="result"></p>
+</body>
+</html>

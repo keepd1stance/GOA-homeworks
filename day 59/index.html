@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>მომხმარებლის რეგისტრაცია</title>
+    <script>
+        function validateForm() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var termsChecked = document.getElementById("terms").checked;
+
+            if (firstName === "" || lastName === "" || email === "" || password === "" || !termsChecked) {
+                alert("გთხოვთ, შეავსოთ ყველა ველი");
+                return false;
+            }
+
+            console.log("სახელი: " + firstName);
+            console.log("გვარი: " + lastName);
+            console.log("ელფოსტა: " + email);
+            console.log("პაროლი: " + password);
+            console.log("წესები და პირობები: " + (termsChecked ? "დეთანხმება" : "არ ეთანხმება"));
+
+            return true; 
+        }
+    </script>
+</head>
+<body>
+
+    <h1>მომხმარებლის რეგისტრაცია</h1>
+
+    <form onsubmit="return validateForm()">
+        <label for="firstName">სახელი:</label><br>
+        <input type="text" id="firstName" name="firstName"><br><br>
+
+        <label for="lastName">გვარი:</label><br>
+        <input type="text" id="lastName" name="lastName"><br><br>
+
+        <label for="email">ელფოსტა:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="password">პაროლი:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+
+        <label>
+            <input type="checkbox" id="terms">  ვეთანხმები <a href="#">წესებს და პირობებს</a>
+        </label><br><br>
+
+        <button type="submit">რეგისტრაცია</button>
+    </form>
+
+</body>
+</html>
